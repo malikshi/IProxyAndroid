@@ -131,7 +131,7 @@ object Utils {
         "nameserver" to mutableListOf(
             "1.1.1.1#PROXY",
             "8.8.8.8#PROXY",
-            "1.0.0.1#PROXY"
+            "1.0.0.1#PROXY",
             "9.9.9.9#PROXY"
         )
         )
