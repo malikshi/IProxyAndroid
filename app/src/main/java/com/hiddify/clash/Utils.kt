@@ -125,12 +125,14 @@ object Utils {
         "default-nameserver" to mutableListOf(
             "1.1.1.1",
             "8.8.8.8",
-            "1.0.0.1"
+            "1.0.0.1",
+            "9.9.9.9"
         ),
         "nameserver" to mutableListOf(
-            "https://1.1.1.1/dns-query#PROXY",
-            "https://8.8.8.8/dns-query#PROXY",
-            "https://1.0.0.1/dns-query#PROXY"
+            "1.1.1.1#PROXY",
+            "8.8.8.8#PROXY",
+            "1.0.0.1#PROXY"
+            "9.9.9.9#PROXY"
         )
         )
         val proxies: ArrayList<Any> = ArrayList()
@@ -203,10 +205,6 @@ object Utils {
         yml["proxy-providers"]=proxy_providers
         yml["rules"] = arrayListOf(
             "IP-CIDR,10.10.0.0/16,PROXY",
-            "GEOIP,IR,DIRECT",
-            "GEOIP,CN,DIRECT",
-            "DOMAIN-SUFFIX,.ir,DIRECT",
-            "DOMAIN-SUFFIX,.cn,DIRECT",
             "MATCH,PROXY"
         )
 
