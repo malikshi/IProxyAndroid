@@ -204,6 +204,9 @@ object Utils {
         yml["proxy-groups"] = proxy_groups
         yml["proxy-providers"]=proxy_providers
         yml["rules"] = arrayListOf(
+            "GEOSITE,rule-malicious,REJECT",
+            "GEOSITE,oisd-full,REJECT",
+            "GEOSITE,rule-ads,REJECT",
             "IP-CIDR,10.10.0.0/16,PROXY",
             "MATCH,PROXY"
         )
